@@ -7,6 +7,7 @@ FROM tinyerp/debian-postgresql:9.4
 # Create PostgreSQL user "odoo"
 # Untar configuration "/etc/supervisor/conf.d/odoo.conf"
 # and "/etc/odoo/odoo-server.conf"
+RUN apt-get update
 RUN export DEBIAN_FRONTEND=noninteractive LANG=en_US.UTF-8 \
  && apt-get install -y --no-install-recommends python-geoip python-gevent \
     python-ldap python-lxml python-markupsafe python-pil python-pip \
